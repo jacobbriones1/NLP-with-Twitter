@@ -1,4 +1,7 @@
-#  Credentials for using Twitter API. 
+#  Credentials for using Twitter API.
+#   The getTweets.py file imports this file, so 
+#   users must specify these values.
+
 CONSUMER_KEY = "--INSERT CONSUMER KEY--"
 CONSUMER_SECRET = "--INSERT CONSUMER SECRET--"
 
