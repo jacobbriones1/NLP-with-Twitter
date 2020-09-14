@@ -1,4 +1,4 @@
-# processTweets.py is the main program used to clean our 
+# cleanTweets.py is the main program used to clean our 
 #  text data. There are three methods. The cleanTweet method
 #  is used to simplify the cleanTweets method. These methods
 #  use the regex library re to remove unwanted symbols and
