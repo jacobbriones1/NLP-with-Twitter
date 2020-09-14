@@ -6,4 +6,6 @@ Using Twitter data and python to analyze user sentiment towards presidential can
 
 ![Trump Word Cloud](trumpWordcloud.png)
 
-![political Word Cloud](politicalWordCloud.png)
+<p align="center">
+  <img src="politicalWordCloud.png" />
+</p>
