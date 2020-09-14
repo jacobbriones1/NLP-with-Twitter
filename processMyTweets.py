@@ -1,14 +1,11 @@
 #  Example case: analyzing sentiment towards Politidal Candidates:
+#  Written by Jacob Briones
 
 import numpy as np
 import pandas as pd
 from processTweets import cleanTweets, lemmatize
 from wordListFunctions import wordList,wordFreq
-from wordPlots import 
-import nltk
-import matplotlib.pyplot as plt
-from wordcloud import wordCloudPlot
-from collections import Counter
+from wordPlots import wordCloudPlot
 
 data = pd.read_csv("tweets.csv")
 tweets = data.Text
