@@ -18,7 +18,7 @@ can reproduce results that aid in understanding user sentiment. <br>
 in order to connect to the Twitter API. For information on how to access the Twitter API using python see http://docs.tweepy.org/en/latest/ 
 and https://developer.twitter.com/en/docs/getting-started.<br>
 #### Methods:
-  -  `getTweets( [String:keywords_to_track] ) ` : This method must be called to initialize the stream. The input can be any list of
+  -  `getTweets([keywords_to_track]) ` : This method must be called to initialize the stream. The input can be any list of
   keywords which the user intends to track.
 <br>
 
