@@ -28,8 +28,9 @@ in order to connect to the Twitter API. For information on how to access the Twi
 `cleanTweets.py` : Contains text preprocessing methods used to clean tweet texts. This file is not nearly complere, as it only contains methods for
 removing unwanted characters and symbols, and lemmatization. <br>
 #### Methods:
-  - `cleanTweet(tweet)` :
-  - `cleanTweets(tweets)` :
+  - `cleanTweet(tweet)` : Uses the regex library `re` to remove unwanted characters and symbols which do not provide any meaningful information. Should
+  be modified depending on the type of text being processed. See code.<br>
+  - `cleanTweets(tweets)` : Applies the `cleanTweet` function to an entire list of tweets. <br>
   - `lemmatize(tweets)` :
 
 `wordListFunctions.py` <br>
