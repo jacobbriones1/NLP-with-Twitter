@@ -1,3 +1,10 @@
+#  Methods for transforming tokenized tweets into 
+#   either a single concatenated list, or a frequency
+#   dictionary for a statistical analyis of word
+#   frequency.
+
+# Written by Jacob Briones
+
 # Concatenate list of lists of words into single list
 def wordList(wordlist):
     allWords = []
