@@ -1,3 +1,14 @@
+# processTweets.py is the main program used to clean our 
+#  text data. There are three methods. The cleanTweet method
+#  is used to simplify the cleanTweets method. These methods
+#  use the regex library re to remove unwanted symbols and
+#  transform the data into a form which is easier to process.
+
+#  !!! A method for stemming should be added as well as any other
+#        methods for preprocessing data !!!!!!
+
+# Written by Jacob Briones
+
 import nltk
 from nltk import word_tokenize,sent_tokenize
 from nltk.stem import WordNetLemmatizer
@@ -84,7 +95,7 @@ def lemmatize(tweets):
         else:
             return ''
 
-    #  Lemmatize words
+    #  Lemmatize 
     lemmatizer = WordNetLemmatizer()
     lemmatizedWords = []
     
@@ -96,26 +107,4 @@ def lemmatize(tweets):
                 words2append.append(lemmatizer.lemmatize(treebanktags[j][0],get_wordnet_pos(treebanktags[j][1])))
         lemmatizedWords.append(words2append)
 
-    for i in range(len(lemmatizedWords)):
-        lemmatizedWords[i][:]=[word for word in lemmatizedWords[i] if word!='http' and word!='' and word!='...']
-
     return lemmatizedWords
-
-def wordList(wordlist):
-    allWords = []
-    for words in wordlist:
-        for word in words:
-            allWords.append(word)
-    return allWords
-
-def wordFreq(wordList):
-    vocab = set(wordList)
-    freq = set()
-    for word in vocab:
-        count = 0
-        for i in range(len(wordList)):
-            if wordList[i]==word:
-                count+=1
-        freq.add((count,word))
-    return list(freq)
-
