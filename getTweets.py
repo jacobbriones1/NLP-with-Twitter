@@ -52,11 +52,3 @@ def getTweets(ketwords_to_track):
         # Initiate the stream
         stream = Stream(auth, CustomStreamListener(api))
         stream.filter(track=keywords_to_track)
-
-
-
-
-
-
-
- 
