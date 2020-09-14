@@ -1,11 +1,20 @@
+# Plot methods for analyzing text. 
+#   !!!  More plot methods should be added for better analysis  !!!
+
+# Written by Jacob Briones 
+
 from wordcloud import WordCloud
 import matplotlib.pyplot as plt
 import numpy as np
 import re
 
+#  Return a word cloud. The input should be a word frequency
+#   dictionary, which the wordFreq method computes in the 
+#   wordListFunctions.py file.
+
 def wordCloudPlot(dictionary):
     wordcloud = WordCloud(background_color='black',
-                          max_words=3000,
+                          max_words=150,
                           colormap='hsv',
                           relative_scaling=0.5,
                           max_font_size=200,
@@ -19,14 +28,4 @@ def wordCloudPlot(dictionary):
     plt.imshow(wordcloud,interpolation='bilinear')
     plt.axis('off')
     plt.show()
-OnlyAscii = lambda s: re.match('^[\x00-\x7F]+$', s) != None
-
-wf = dict(np.load('wordFrequency.npy',allow_pickle=True).item())
-wF = dict()
-for i,word in enumerate(wf):
-    if OnlyAscii(word)==True:
-        wF[word]=i
-        
-wordCloudPlot(wF)
-
     
