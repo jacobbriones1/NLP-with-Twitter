@@ -1,6 +1,8 @@
-import numpy as np
-import pandas as pd
-import tweepy
+# The getTweets.py function contains a single method which 
+#   initializes a live stream of tweets which contain keywords
+#   specified by the user. The tweets are stored into a json file
+#   named tweets.json
+#   Written by Jacob Briones: of tweets 
 import datetime
 import os
 import json
@@ -28,21 +30,26 @@ def getTweets(ketwords_to_track):
         #   parameter ensures that our program will not terminate if this
         #   error occurs.
         api = tweepy.API(auth, wait_on_rate_limit=True,)
-        tweets = []
-        # file name that you want to open is the second argument
+        
+        # The file which we will be storing tweets in will be tweets.json
         save_file = open('tweets.json', 'a')
-
+        
+        # Overriding the Streamlistener class allows us to specify how we
+        # want to handle our incoming twitter data.
         class CustomStreamListener(tweepy.StreamListener):
             def __init__(self, api):
                 self.api = api
                 super(tweepy.StreamListener, self).__init__()
                 self.save_file = tweets
-
+            
+            # This method specifies that we want each tweet object to be
+            # stored as a json object in our file in real time
             def on_data(self, tweet):
                 self.save_file.append(json.loads(tweet))
                 print(tweet)
                 save_file.write(str(tweet))
-
+                
+        # Initiate the stream
         stream = Stream(auth, CustomStreamListener(api))
         stream.filter(track=keywords_to_track)
 
