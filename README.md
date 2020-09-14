@@ -11,10 +11,9 @@ relevant text information, it is possible to determine a relatively accurate mod
 This kind of analysis is commonly known as **Sentiment Analysis**. This repository is aimed at contributing software which
 can reproduce results that aid in understanding user sentiment, and also developing new research in machine learning. <br>
 <br>
-*--This code uses Python 3.8.5--* 
-<p align="center">
-  <img src="politicalWordCloud.png" />
-</p>
+*--This code uses Python 3.8.5--* <br>
+
+![Words Associated to Trump](trumpWordcloud.png)
 
 ### Program Files and Methods:
 `getTweets.py`: Is the retrieval program which allows users to access live streaming tweets. The main used in this program is the `tweepy` library,
