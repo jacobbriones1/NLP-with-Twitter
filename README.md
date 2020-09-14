@@ -16,10 +16,9 @@ can reproduce results that aid in understanding user sentiment. <br>
 ### Program Files and Methods:
 `getTweets.py`: Is the retrieval program which allows users to access live streaming tweets. The user must identify their credentials
 in order to connect to the Twitter API. For information on how to access the Twitter API using python see http://docs.tweepy.org/en/latest/ 
-and https://developer.twitter.com/en/docs/getting-started.
-
-<br>
-  -`getTweets([*String* keywords_to_track])`: This method must be called to initialize the stream. The input can be any list of
+and https://developer.twitter.com/en/docs/getting-started.<br>
+#### Methods:
+  -  `getTweets( [String:keywords_to_track] ) ` : This method must be called to initialize the stream. The input can be any list of
   keywords which the user intends to track.
 <br>
 
