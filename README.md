@@ -38,8 +38,8 @@ removing unwanted characters and symbols, and lemmatization. <br>
   The method outputs a single list, where each entry is a word rather than another list. <br>
   - `wordFreq(wordList)` : Inputs a list of words of the form outputted by wordList, and returns a dictionary object representing word frequencies.
 
-`wordPlots` <br>
+`wordPlots` : Contains visual tools to analyze word frequency. Needs to include more visual tools.<br>
 #### Methods:
-  - `wordCloudPlot(dictionary)` : <br>
+  - `wordCloudPlot(dictionary)` : Plots a word cloud. Input parameter should be a word Frequency dictionary. frequency <br>
   
 `processMyTweets` <br>
