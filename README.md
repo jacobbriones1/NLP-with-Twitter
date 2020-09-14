@@ -35,7 +35,7 @@ removing unwanted characters and symbols, and lemmatization. <br>
 
 `wordListFunctions.py` : Contains helper methods for analyzing all words contained in a list of tweets. <br>
 #### Methods:
-  - `wordList(wordlist)` : Input is a list of tweets tokenized into words:`tweet: ['this is a tweet'] ---> wordList: [['this'],['is'],['a'],['tweet']]`.
+  - `wordList(wordlist)` : Input is a list of tweets tokenized into words:`tweet: ['a tweet'] ---> wordList: [['a'],['tweet']]`.
   The method outputs a single list, where each entry is a word rather than another list. <br>
   - `wordFreq(wordList)` : Inputs a list of words of the form outputted by wordList, and returns a dictionary object representing word frequencies.
 
