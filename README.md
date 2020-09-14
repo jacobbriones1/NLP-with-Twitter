@@ -39,5 +39,6 @@ removing unwanted characters and symbols, and lemmatization. <br>
 
 `wordPlots` <br>
 #### Methods:
-  - `wordCloudPlot(dictionary)` :
+  - `wordCloudPlot(dictionary)` : <br>
+  
 `processMyTweets` <br>
