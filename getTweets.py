@@ -9,6 +9,7 @@ import credentials
 # For streaming live tweets
 from tweepy import Stream
 
+# keywords_to_track: list of strings to watch for.
 def getTweets(ketwords_to_track):
         #  Retrieve credentials
         consumer_key = credentials.CONSUMER_KEY
