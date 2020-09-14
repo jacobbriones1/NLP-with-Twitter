@@ -14,7 +14,8 @@ can reproduce results that aid in understanding user sentiment. <br>
 *--This code uses Python 3.8.5--* <br>
 
 ### Program Files and Methods:
-`getTweets.py`: Is the retrieval program which allows users to access live streaming tweets. The user must identify their credentials
+`getTweets.py`: Is the retrieval program which allows users to access live streaming tweets. The main used in this program is the `tweepy` library,
+which is solely used to connect to the Twitter API through python. The user must identify their credentials
 in order to connect to the Twitter API. For information on how to access the Twitter API using python see http://docs.tweepy.org/en/latest/ 
 and https://developer.twitter.com/en/docs/getting-started.<br>
 #### Methods:
