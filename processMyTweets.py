@@ -1,75 +1,47 @@
+#  Example case: analyzing sentiment towards Politidal Candidates:
+
 import numpy as np
 import pandas as pd
-from processTweets import cleanTweets, lemmatize, wordList, wordFreq
+from processTweets import cleanTweets, lemmatize
+from wordListFunctions import wordList,wordFreq
+from wordPlots import 
 import nltk
 import matplotlib.pyplot as plt
-from wordcloud import WordCloud
+from wordcloud import wordCloudPlot
 from collections import Counter
 
-data = pd.read_csv("twitter_trump_biden.csv")
+data = pd.read_csv("tweets.csv")
 tweets = data.Text
 hashtags= data.Hashtags
 trumpTweets = []
 bidenTweets = []
-trumpAndbidenTweets = []
 
+#  Separate tweets: tweets containing only trump, and tweets containing only biden.
 for i in range(len(tweets)):
     if ('trump' in tweets[i].lower() or 'trump' in str(hashtags[i]).lower()) and  (not 'biden' in tweets[i].lower() or not 'biden' in str(hashtags[i]).lower()):
         trumpTweets.append(tweets[i])
 
     elif (not 'trump' in tweets[i].lower() or not 'trump' in str(hashtags[i]).lower()) and  ('biden' in tweets[i].lower() or 'biden' in str(hashtags[i]).lower()):
         bidenTweets.append(tweets[i])
-        
-    elif ('trump' in tweets[i].lower() or 'trump' in str(hashtags[i]).lower()) or ('biden' in tweets[i].lower() or 'biden' in str(hashtags[i]).lower()):
-        trumpAndbidenTweets.append(tweets[i])
 
+# Preprocess tweets:
+
+# Reformat and remove unwanted characters:
 trump = cleanTweets(trumpTweets)
 biden = cleanTweets(bidenTweets)
-trumpbiden = cleanTweets(trumpAndbidenTweets)
 
+# Lemmatize
 trump = lemmatize(trump)
 biden = lemmatize(biden)
-trumpbiden = lemmatize(trumpbiden)
 
+# concatenate lists into single list 
 trumpWords = wordList(trump)
-trumpFreq = wordFreq(trumpWords)
-
 bidenWords = wordList(biden)
+
+# get word frequencies
+trumpFreq = wordFreq(trumpWords)
 bidenFreq = wordFreq(bidenWords)
 
-bothWords = wordList(trumpbiden)
-bothFreq = wordFreq(bothWords)
-        
-ytrump, ybiden, yboth = [],[],[]
-
-for i in range(len(trumpFreq)):
-    ytrump=trumpFreq[i][0]
-for i in range(len(bidenFreq)):
-    ybiden = bidenFreq[i][0]
-    
-
-
-wordcloud = WordCloud(width=900,
-                      height=500,
-                      max_words=500,
-                      max_font_size=100,
-                      relative_scaling=0.5,
-                      colormap='Blues',
-                      normalize_plurals=True).generate_from_frequencies(Counter(trumpWords))
-plt.figure(figsize=(17,14))
-plt.imshow(wordcloud, interpolation='bilinear')
-plt.axis("off")
-plt.show()
-
-wordcloud = WordCloud(width=900,
-                      height=500,
-                      max_words=500,
-                      max_font_size=100,
-                      relative_scaling=0.5,
-                      colormap='Blues',
-                      normalize_plurals=True).generate_from_frequencies(Counter(bidenWords))
-plt.figure(figsize=(17,14))
-plt.imshow(wordcloud, interpolation='bilinear')
-plt.axis("off")
-plt.show()
-
+# plot the word clouds
+wordCloudPlot(trumpFreq)
+wordCloudPlot(bidenFreq)
