@@ -31,12 +31,13 @@ removing unwanted characters and symbols, and lemmatization. <br>
   - `cleanTweet(tweet)` : Uses the regex library `re` to remove unwanted characters and symbols which do not provide any meaningful information. Should
   be modified depending on the type of text being processed. See code.<br>
   - `cleanTweets(tweets)` : Applies the `cleanTweet` function to an entire list of tweets. <br>
-  - `lemmatize(tweets)` :
+  - `lemmatize(tweets)` : Lemmatizes list of tweets based on the parts of speech presented by the tweets.<br>
 
-`wordListFunctions.py` <br>
+`wordListFunctions.py` : Contains helper methods for analyzing all words contained in a list of tweets. <br>
 #### Methods:
-  - `wordList(wordlist)` :
-  - `wordFreq(words)` :
+  - `wordList(wordlist)` : Input is a list of tweets tokenized into words:`tweet: ['this is a tweet'] ---> wordList: [['this'],['is'],['a'],['tweet']]`.
+  The method outputs a single list, where each entry is a word rather than another list. <br>
+  - `wordFreq(wordList)` : Inputs a list of words of the form outputted by wordList, and returns a dictionary object representing word frequencies.
 
 `wordPlots` <br>
 #### Methods:
