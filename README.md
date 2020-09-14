@@ -13,7 +13,7 @@ can reproduce results that aid in understanding user sentiment, and also develop
 <br>
 *--This code uses Python 3.8.5--* <br>
 <kbd>
-  <img src="trumpWordcloud.pn">
+  <img src=trumpWordcloud.png>
 </kbd>
 ### Program Files and Methods:
 `getTweets.py`: Is the retrieval program which allows users to access live streaming tweets. The main used in this program is the `tweepy` library,
