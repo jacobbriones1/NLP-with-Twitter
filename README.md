@@ -9,7 +9,7 @@ or events. In hopes of understanding public opinion about some product or event,
 *key-words* or *filters* that are relevent to our object of study. And after sifting through this information and extracting
 relevant text information, it is possible to determine a relatively accurate model of how  users' view our object of interest.
 This kind of analysis is commonly known as **Sentiment Analysis**. This repository is aimed at contributing software which
-can reproduce results that aid in understanding user sentiment. <br>
+can reproduce results that aid in understanding user sentiment, and also developing new research in machine learning. <br>
 <br>
 *--This code uses Python 3.8.5--* <br>
 
