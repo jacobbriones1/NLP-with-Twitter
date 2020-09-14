@@ -10,9 +10,19 @@ or events. In hopes of understanding public opinion about some product or event,
 relevant text information, it is possible to determine a relatively accurate model of how  users' view our object of interest.
 This kind of analysis is commonly known as **Sentiment Analysis**. This repository is aimed at contributing software which
 can reproduce results that aid in understanding user sentiment. <br>
+<br>
 *--This code uses Python 3.8.5--* <br>
 
-### Functions and Methods:
+### Program Files and Methods:
+`getTweets.py`: Is the retrieval program which allows users to access live streaming tweets. The user must identify their credentials
+in order to connect to the Twitter API. For information on how to access the Twitter API using python see http://docs.tweepy.org/en/latest/ 
+and https://developer.twitter.com/en/docs/getting-started.
+
+<br>
+  -`getTweets([*String* keywords_to_track])`: This method must be called to initialize the stream. The input can be any list of
+  keywords which the user intends to track.
+<br>
+
 
 
 ![Biden Word Cloud](bidenWordcloud.png)
