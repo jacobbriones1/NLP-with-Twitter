@@ -17,26 +17,24 @@ can reproduce results that aid in understanding user sentiment. <br>
 `getTweets.py`: Is the retrieval program which allows users to access live streaming tweets. The main used in this program is the `tweepy` library,
 which is solely used to connect to the Twitter API through python. The user must identify their credentials
 in order to connect to the Twitter API. For information on how to access the Twitter API using python see http://docs.tweepy.org/en/latest/ and https://developer.twitter.com/en/docs/getting-started.<br>
-  
 #### Methods:
   -  `getTweets([keywords_to_track]) ` : This method must be called to initialize the stream. The input can be any list of
-  keywords which the user intends to track.
-<br>
+  keywords which the user intends to track. <br>
 
 `credentials.py` : Stores Access and Client information needed to for API authrorization <br>
 
-`cleanTweets.py` <br>
-
+`cleanTweets.py` : Contains text preprocessing methods used to clean tweet texts. This file is not nearly complere, as it only contains methods for
+removing unwanted characters and symbols, and lemmatization. <br>
 #### Methods:
-  -
+  - `cleanTweet(tweet)`
+  - `cleanTweets(tweets)`
+  - `lemmatize(tweets)`
 
 `wordListFunctions.py` <br>
-
 #### Methods:
   -
 
 `wordPlots` <br>
-
 #### Methods:
   - 
 `processMyTweets` <br>
