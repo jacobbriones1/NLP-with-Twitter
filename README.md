@@ -12,8 +12,9 @@ This kind of analysis is commonly known as **Sentiment Analysis**. This reposito
 can reproduce results that aid in understanding user sentiment, and also developing new research in machine learning. <br>
 <br>
 *--This code uses Python 3.8.5--* <br>
-![Words Associated to Trump](trumpWordcloud.png)
-
+<kbd>
+  <img src="trumpWordcloud.pn">
+</kbd>
 ### Program Files and Methods:
 `getTweets.py`: Is the retrieval program which allows users to access live streaming tweets. The main used in this program is the `tweepy` library,
 which is solely used to connect to the Twitter API through python. The user must identify their credentials
