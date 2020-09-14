@@ -12,8 +12,8 @@ This kind of analysis is commonly known as **Sentiment Analysis**. This reposito
 can reproduce results that aid in understanding user sentiment. <br>
 *--This code uses Python 3.8.5--* <br>
 
+### Functions and Methods:
 
-### Word clouds for most used words in tweets about Biden, Trump, and the overall political word cloud
 
 ![Biden Word Cloud](bidenWordcloud.png)
 
