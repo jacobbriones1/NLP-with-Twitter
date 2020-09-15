@@ -40,7 +40,7 @@ def wordFreq(wordList):
     return wordfreq
 
 # Create onehot vector representation of word
-def onehotvector(vocab, word):
+def onehotvector(vocab,word):
     size = len(vocab)
     vector = np.zeros(size,dtype=int)
     #get index of word in list
@@ -48,15 +48,63 @@ def onehotvector(vocab, word):
         index = vocab.index(word.lower())
         vector[index]=1
         return vector
-    
-# create a list of onehot vectors for a some subtexts 
-#   from the corpus
+
+#  Creates a list of onehot vectors for a single string
+#   using the vocabulary from the entire corpus
 def onehotvectors(corpus, string):
     allvectors = []
     wordlist = wordList(corpus)
-    Vocab= vocab(corpus)
+    Vocab= vocab(wordlist)
     words = word_tokenize(string)
     for word in words:
         if word.lower() in Vocab:
             allvectors.append(onehotvector(Vocab, word.lower()))
     return allvectors
+
+#  creates all lists of onehot vectors for each string in the  corpus
+def all_onehotvectors(corpus):
+    allvectors = []
+    for string in corpus:
+        allvectors.append(onehotvectors(corpus, string))
+    return allvectors
+
+#  returns the words which are within 'window' distance away from
+#   the word in the string.
+def wordsNextTo(string, word, window):
+    string = str(string)
+    string = re.sub(r'[^a-zA-Z ]', '', string)
+    print(string)
+    words= word_tokenize(string)
+    wordlist = []
+    for i  in range(len(words)):
+        wordlist.append(words[i].lower())
+    word = str(word).lower()
+    try:
+        index = wordlist.index(word)
+        print('index of word: ', index)
+    except:
+        print(word.lower(),' is not in the string')
+    
+    size = len(wordlist)
+    possibleNextTo= []
+    if index == 0:ss
+        i=1
+        while i <=window and i <len(wordlist):
+            possibleNextTo.append((wordlist[wordlist.index(word)],wordlist[i]))
+            i+=1                
+
+    elif index == len(wordlist)-1:
+        i=1
+        last=len(wordlist)-1
+        while i<= window and len(wordlist)-i>0:
+            possibleNextTo.append((wordlist[wordlist.index(word)],wordlist[-i-1]))
+            i+=1
+    else:
+        possibleNextTo=[]
+        for i in range(1,window,1):
+            if index - i>=0:
+                possibleNextTo.append((wordlist[index],wordlist[index-i]))
+            if index+i < len(wordlist):
+                possibleNextTo.append((wordlist[index],wordlist[index+i]))
+                
+    return possibleNextTo
