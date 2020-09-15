@@ -3,7 +3,7 @@
 ## About this repository
 There are over 330 million twitter users, with over 145 million active users daily. There are on average 6,000
 new tweets every second from users all over the world. With twitter being a public platform, this information 
-is available to anyone who wants it (within the guidelines of Twitter policy).One of the most valuable uses of 
+is available to anyone who wants it (within the guidelines of Twitter policy). One of the most valuable uses of 
 Twitter data is understanding users' attitude, or *sentiment* towards certain products, 
 or events. In hopes of understanding public opinion about some product or event, we can find tweets which contain certain 
 *key-words* or *filters* that are relevent to our object of study. And after sifting through this information and extracting
