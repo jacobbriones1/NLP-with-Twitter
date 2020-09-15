@@ -1,17 +1,20 @@
-#  Methods for transforming tokenized tweets into 
-#   either a single concatenated list, or a frequency
-#   dictionary for a statistical analyis of word
-#   frequency.
+#  Methods for working with list of texts.
 
 # Written by Jacob Briones
 
+#  For getting a lists of words
+from nltk.tokenize import word_tokenize
+
 # Concatenate list of lists of words into single list
-def wordList(wordlist):
-    allWords = []
-    for words in wordlist:
-        for word in words:
-            allWords.append(word)
-    return allWords
+def wordList(tweetlist):
+    words = []
+    for tweet in tweetlist:
+        tokens = word_tokenize(tweet)
+        for word in tokens:
+            if word.isalpha()==True:
+                words.append(word)
+    return words
+
 
 #  Create word frequency dictionary
 def wordFreq(wordList):
@@ -25,3 +28,11 @@ def wordFreq(wordList):
         if not word.lower() in wordfreq:
             wordfreq[word.lower()] = frequency
     return wordfreq
+
+#  Create a list of all words used in texts.
+def vocab(wordlist):
+    vocab = []
+    for word in wordlist:
+        if not word in vocab:
+            vocab.append(word)
+    return vocab
