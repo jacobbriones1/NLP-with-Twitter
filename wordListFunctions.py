@@ -4,22 +4,31 @@
 
 #  For getting a lists of words
 from nltk.tokenize import word_tokenize
+import numpy as np
 
-# Concatenate list of lists of words into single list
-def wordList(tweetlist):
-    words = []
-    for tweet in tweetlist:
-        tokens = word_tokenize(tweet)
+# Concatenate corpus into single list of words
+def wordList(corpus):
+    wordlist = []
+    for words in corpus:
+        tokens = word_tokenize(words)
         for word in tokens:
             if word.isalpha()==True:
-                words.append(word)
-    return words
+                wordlist.append(word)
+    return wordlist
+
+#  Create vocab from texts
+def vocab(wordlist):
+    vocab = []
+    for word in wordlist:
+        if not word.lower() in vocab:
+            vocab.append(word.lower())
+    return  list(sorted(set(vocab)))
 
 
-#  Create word frequency dictionary
+#  Create word frequency dictionary for a list of words
 def wordFreq(wordList):
-    vocab = sorted(set(wordList))
     wordfreq = dict()
+    vocab = sorted(set(wordList))
     for word in vocab:
         frequency=0
         for i in range(len(wordList)):
@@ -29,10 +38,24 @@ def wordFreq(wordList):
             wordfreq[word.lower()] = frequency
     return wordfreq
 
-#  Create a list of all words used in texts.
-def vocab(wordlist):
-    vocab = []
-    for word in wordlist:
-        if not word in vocab:
-            vocab.append(word)
-    return list(sorted(set(vocab)))
+# Create onehot vector representation of word
+def onehotvector(vocab, word):
+    size = len(vocab)
+    vector = np.zeros(size,dtype=int)
+    #get index of word in list
+    if  word.lower() in vocab:
+        index = vocab.index(word.lower())
+        vector[index]=1
+        return vector
+    
+# create a list of onehot vectors for a some subtexts 
+#   from the corpus
+def onehotvectors(corpus, string):
+    allvectors = []
+    wordlist = wordList(corpus)
+    Vocab= vocab(corpus)
+    words = word_tokenize(string)
+    for word in words:
+        if word.lower() in Vocab:
+            allvectors.append(onehotvector(Vocab, word.lower()))
+    return allvectors
