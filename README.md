@@ -16,16 +16,16 @@ various types of machine learning techniques.<br>
   <img src=trumpWordcloud.png>
 </kbd>
 ### Program Files and Methods:
-`getTweets.py`: Is the retrieval program which allows users to access live streaming tweets. The main used in this program is the `tweepy` library,
+**getTweets.py** : Is the retrieval program which allows users to access live streaming tweets. The main used in this program is the `tweepy` library,
 which is solely used to connect to the Twitter API through python. The user must identify their credentials
 in order to connect to the Twitter API. For information on how to access the Twitter API using python see http://docs.tweepy.org/en/latest/ and https://developer.twitter.com/en/docs/getting-started.<br>
 #### Methods:
   -  `getTweets([keywords_to_track]) ` : This method must be called to initialize the stream. The input can be any list of
   keywords which the user intends to track. <br>
 
-`credentials.py` : Stores Access and Client information needed to for API authrorization <br>
+**credentials.py** : Stores Access and Client information needed to for API authrorization <br>
 
-`cleanTweets.py` : Contains text preprocessing methods used to clean tweet texts. This file is not nearly complere, as it only contains methods for
+**cleanTweets.py** : Contains text preprocessing methods used to clean tweet texts. This file is not nearly complere, as it only contains methods for
 removing unwanted characters and symbols, and lemmatization. <br>
 #### Methods:
   - `cleanTweet(tweet)` : Uses the regex library `re` to remove unwanted characters and symbols which do not provide any meaningful information. Should
@@ -33,7 +33,7 @@ removing unwanted characters and symbols, and lemmatization. <br>
   - `cleanTweets(tweets)` : Applies the `cleanTweet` function to an entire list of tweets. <br>
   - `lemmatize(tweets)` : Lemmatizes list of tweets based on the parts of speech presented by the tweets.<br>
 
-`wordListFunctions.py` : Contains helper methods for analyzing all words contained in a list of tweets. <br>
+**wordListFunctions.py** : Contains helper methods for analyzing all words contained in a list of tweets. <br>
 #### Methods:
   - `wordList([strings])` : Inputs a list of strings, and uses the `nltk.word_tokenize` to convert each string into a list of words.
   I chose not to include non-alphabetic characters in the output, and also converting each word to lowercase.
@@ -45,8 +45,6 @@ removing unwanted characters and symbols, and lemmatization. <br>
   tweets(not tokenized into words) and a single tweet which has been tokenized into words, and returns a list of onehot vectors for each alphabetic word
   in the tweet<br>
 
-`wordPlots` : Contains visual tools to analyze word frequency. Needs to include more visual tools.<br>
+**wordPlots.py** : Contains visual tools to analyze word frequency. Needs to include more visual tools.<br>
 #### Methods:
   - `wordCloudPlot(dictionary)` : Plots a word cloud. Input parameter should be a word Frequency dictionary. frequency <br>
-  
-`processMyTweets` <br>
