@@ -35,4 +35,4 @@ def vocab(wordlist):
     for word in wordlist:
         if not word in vocab:
             vocab.append(word)
-    return vocab
+    return list(sorted(set(vocab)))
