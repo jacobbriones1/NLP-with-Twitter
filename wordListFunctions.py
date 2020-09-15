@@ -51,21 +51,23 @@ def onehotvector(vocab,word):
 
 #  Creates a list of onehot vectors for a single string
 #   using the vocabulary from the entire corpus
-def onehotvectors(corpus, string):
+def onehotvectors(vocab, string):
     allvectors = []
-    wordlist = wordList(corpus)
-    Vocab= vocab(wordlist)
+    print(len(vocab))
     words = word_tokenize(string)
     for word in words:
-        if word.lower() in Vocab:
-            allvectors.append(onehotvector(Vocab, word.lower()))
+        if word.lower() in vocab:
+            allvectors.append(onehotvector(vocab, word.lower()))
     return allvectors
 
 #  creates all lists of onehot vectors for each string in the  corpus
 def all_onehotvectors(corpus):
     allvectors = []
+    tokenized = []
+    allwords = wordList(corpus)
+    Vocab = vocab(allwords)
     for string in corpus:
-        allvectors.append(onehotvectors(corpus, string))
+        allvectors.append(onehotvectors(Vocab,string))
     return allvectors
 
 #  returns the words which are within 'window' distance away from
