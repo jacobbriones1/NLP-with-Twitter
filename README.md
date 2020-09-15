@@ -44,6 +44,8 @@ removing unwanted characters and symbols, and lemmatization. <br>
   - `onehotvectors([strings],[words])` : Takes a list of strings and a list of words as arguments. In terms of tweets, this function inputs a list of
   tweets(not tokenized into words) and a single tweet which has been tokenized into words, and returns a list of onehot vectors for each alphabetic word
   in the tweet<br>
+  - `all_onehotvectors(corpus)` : inputs an entire list of strings and returns a list of lists containing onehot vectors <br>
+  - `wordsNextTo(string, word, window)` : <br>
 
 **wordPlots.py** : Contains visual tools to analyze word frequency. Needs to include more visual tools.<br>
 #### Methods:
