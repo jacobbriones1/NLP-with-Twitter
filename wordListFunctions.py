@@ -7,6 +7,7 @@ from nltk.tokenize import word_tokenize
 import numpy as np
 
 # Concatenate corpus into single list of words
+#  Note: does not return non-alphabetic tokens
 def wordList(corpus):
     wordlist = []
     for words in corpus:
