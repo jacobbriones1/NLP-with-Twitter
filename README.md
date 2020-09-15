@@ -1,6 +1,6 @@
-# Analyzing-Twitter-Data
+# NLP with Twitter Data
 
-## What is this repository useful for?
+## About this repository
 There are over 330 million twitter users, with over 145 million active users daily. There are on average 6,000
 new tweets every second from users all over the world. With twitter being a public platform, this information 
 is available to anyone who wants it (within the guidelines of Twitter policy). <br>
@@ -8,10 +8,10 @@ One of the most valuable uses of Twitter data is understanding users' attitude, 
 or events. In hopes of understanding public opinion about some product or event, we can find tweets which contain certain 
 *key-words* or *filters* that are relevent to our object of study. And after sifting through this information and extracting
 relevant text information, it is possible to determine a relatively accurate model of how  users' view our object of interest.
-This kind of analysis is commonly known as **Sentiment Analysis**. This repository is aimed at contributing software which
-can reproduce results that aid in understanding user sentiment, and also developing new research in machine learning. <br>
-<br>
-*--This code uses Python 3.8.5--* <br>
+This kind of analysis is commonly known as **Sentiment Analysis**. Sentiment analysis is one of the most important aspects of 
+Natural Language Processing, and a very active area of research. This repository is aimed at studying twitter data using
+various types of machine learning techniques.<br>
+*--This code uses Python 3.x--* <br>
 <kbd>
   <img src=trumpWordcloud.png>
 </kbd>
@@ -35,9 +35,15 @@ removing unwanted characters and symbols, and lemmatization. <br>
 
 `wordListFunctions.py` : Contains helper methods for analyzing all words contained in a list of tweets. <br>
 #### Methods:
-  - `wordList(wordlist)` : Input is a list of tweets tokenized into words:`tweet: ['a tweet'] ---> wordList: [['a'],['tweet']]`.
-  The method outputs a single list, where each entry is a word rather than another list. <br>
-  - `wordFreq(wordList)` : Inputs a list of words of the form outputted by wordList, and returns a dictionary object representing word frequencies.
+  - `wordList([strings])` : Inputs a list of strings, and uses the `nltk.word_tokenize` to convert each string into a list of words.
+  I chose not to include non-alphabetic characters in the output, and also converting each word to lowercase.
+  The method outputs a single list of lowercase words. <br>
+  - `vocab([words])` : inputs a list of words, typically outputted from wordList, and generates a list of all vocabulary words used in the list<br>
+  - `wordFreq([words])` : Inputs a list of words of the form outputted by wordList, and returns a dictionary object representing word frequencies.<br>
+  - `onehotvector(vocab, word)` : Takes a vocabulary list and a single word as its arguments, and returns the onehot representation of the word. <br>
+  - `onehotvectors([strings],[words])` : Takes a list of strings and a list of words as arguments. In terms of tweets, this function inputs a list of
+  tweets(not tokenized into words) and a single tweet which has been tokenized into words, and returns a list of onehot vectors for each alphabetic word
+  in the tweet<br>
 
 `wordPlots` : Contains visual tools to analyze word frequency. Needs to include more visual tools.<br>
 #### Methods:
