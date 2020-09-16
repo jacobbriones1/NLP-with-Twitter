@@ -52,7 +52,7 @@ removing unwanted characters and symbols, and lemmatization. <br>
 **wordPlots.py** : Contains visual tools to analyze word frequency. Needs to include more visual tools.<br>
 #### Methods:
   - `wordCloudPlot(dictionary)` : Plots a word cloud. Input parameter should be a word Frequency dictionary. frequency <br>
-  **word2vec** : Implementation of the Skip-Gram Word2Vec model which does not use pre-trained models. 
+**word2vec** : Implementation of the Skip-Gram Word2Vec model which does not use pre-trained models. 
 
 ## The word2vec functions
 The word2vec model allows us to learn *word embeddings* on large pieces of text data. The benefit of using learned word embeddings
