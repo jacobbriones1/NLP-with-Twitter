@@ -60,10 +60,15 @@ is that they allow us to train models without the use of pre-labelled data.In ot
 learned using a common machine learning technique: we train a fully connected network with a single hidden layer. <br>
 
 **What exaclty is a Word Embedding?**<br>
-Computers 
+A word embedding is a function which maps a set of words in some language to a higher dimensional  *W* <img src="https://latex.codecogs.com/svg.latex?W$" />
+
 <br>
 As an example, we can consider the following trending tweet regarding Joe Rogan and the upcoming presidential debate:<br>
-* *President Donald Trump has accepted an invitation from Joe Rogan to appear on his podcast*<br>
+* *If I die from going to a Trump rally, at least Ill die jacked-up on rage, racism, and conspiracy theories.*
+<br> 
+In order for a computer to process this statement, we need to convert it into a form which it can process. The simplest way to do represent this statement
+is to convert each word into a vector known as a **One-Hot Encoded** vector. To convert a word into a One-Hot Encoded vector, the first step is to
+create a vocabulary list of all *unique* words used in that string. 
 
 
 <img src="https://latex.codecogs.com/svg.latex?\Large&space;J(\theta,w^t)" title="\Large x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}" />
