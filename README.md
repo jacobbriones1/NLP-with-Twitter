@@ -65,10 +65,9 @@ Intuitively, we can think of an embedded word as a vector which represents the f
 For example, take the sentence: *Kids love eating sugar*. If we choose our embedding space to be 3 dimensional, then the word 'Kids' can be 
 represented as something like [1,-1,3]. Now the goal is for similar words to have similar vectors. For example, if we replace the word *Kids* with
 the word *Children*, then the three dimensional vector for *Children* could be something like [1,-0.89, 2.9].
-
 <br>
 As an example, we can consider the following tweet:<br>
-- *If I die from going to a Trump rally, at least Ill die jacked-up on rage, racism, and conspiracy theories.*
+- "If I die from going to a Trump rally, at least Ill die jacked-up on rage, racism, and conspiracy theories."
 <br> 
 In order for a computer to process this statement, we need to convert it into a form which it can process. The simplest way to do represent this statement
 is to convert each word into a vector known as a **One-Hot Encoded** vector. To convert a word into a One-Hot Encoded vector, the first step is to
