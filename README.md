@@ -60,7 +60,11 @@ is that they allow us to train models without the use of pre-labelled data.In ot
 learned using a common machine learning technique: we train a fully connected network with a single hidden layer. <br>
 
 **What exaclty is a Word Embedding?**<br>
-A word embedding is a function which maps a set of words in some language to a higher dimensional  *W* <img src="https://latex.codecogs.com/svg.latex?W$" />
+A word embedding is a parametrized function which maps words in some language to higher dimensional higher dimensional vector representations.
+Intuitively, we can think of an embedded word as a vector which represents the features of the word. Similar words should have similar vectors.
+For example, take the sentence: *Kids love eating sugar*. If we choose our embedding space to be 3 dimensional, then the word 'Kids' can be 
+represented as something like [1,-1,3]. Now the goal is for similar words to have similar vectors. For example, if we replace the word *Kids* with
+the word *Children*, then the three dimensional vector for *Children* could be something like [1,-0.89, 2.9].
 
 <br>
 As an example, we can consider the following trending tweet regarding Joe Rogan and the upcoming presidential debate:<br>
