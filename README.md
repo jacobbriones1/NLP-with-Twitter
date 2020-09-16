@@ -10,8 +10,10 @@ or events. In hopes of understanding public opinion about some product or event,
 relevant text information, it is possible to determine a relatively accurate model of how  users' view our object of interest.
 This kind of analysis is commonly known as **Sentiment Analysis**. Sentiment analysis is one of the most important aspects of 
 Natural Language Processing, and a very active area of research. This repository is aimed at studying twitter data using
-various types of machine learning techniques.<br>
-*--This code uses Python 3.x--* <br>
+various types of machine learning techniques, and will also serve as a guide for understanding concepts in Deep Learning and 
+Natural Language Processing. <br>
+*This Repository is still being developed. For any students or individuals interested in collaborating
+or contributing, feel free to contact me at jacobbriones1@gmail.com*<br>
 <kbd>
   <img src=trumpWordcloud.png>
 </kbd>
@@ -53,11 +55,15 @@ removing unwanted characters and symbols, and lemmatization. <br>
   **word2vec** : Implementation of the Skip-Gram Word2Vec model which does not use pre-trained models. 
 
 ## The word2vec functions
-<kbd>
-  <img src=wordEmbedding.jpeg>
-</kbd>
-
 The word2vec model allows us to learn *word embeddings* on large pieces of text data. The benefit of using learned word embeddings
 is that they allow us to train models without the use of pre-labelled data.In other words, unsupervised learning. These embeddings are
-learned using a common machine learning technique: we train a fully connected network with a single hidden layer.
+learned using a common machine learning technique: we train a fully connected network with a single hidden layer. <br>
+
+**What exaclty is a Word Embedding?**<br>
+Computers 
+<br>
+As an example, we can consider the following trending tweet regarding Joe Rogan and the upcoming presidential debate:<br>
+* *President Donald Trump has accepted an invitation from Joe Rogan to appear on his podcast*<br>
+
+
 <img src="https://latex.codecogs.com/svg.latex?\Large&space;J(\theta,w^t)" title="\Large x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}" />
