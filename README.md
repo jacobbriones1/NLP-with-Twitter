@@ -67,12 +67,10 @@ represented as something like [1,-1,3]. Now the goal is for similar words to hav
 the word *Children*, then the three dimensional vector for *Children* could be something like [1,-0.89, 2.9].
 
 <br>
-As an example, we can consider the following trending tweet regarding Joe Rogan and the upcoming presidential debate:<br>
-* *If I die from going to a Trump rally, at least Ill die jacked-up on rage, racism, and conspiracy theories.*
+As an example, we can consider the following tweet:<br>
+- *If I die from going to a Trump rally, at least Ill die jacked-up on rage, racism, and conspiracy theories.*
 <br> 
 In order for a computer to process this statement, we need to convert it into a form which it can process. The simplest way to do represent this statement
 is to convert each word into a vector known as a **One-Hot Encoded** vector. To convert a word into a One-Hot Encoded vector, the first step is to
-create a vocabulary list of all *unique* words used in that string. 
-
-
-<img src="https://latex.codecogs.com/svg.latex?\Large&space;J(\theta,w^t)" title="\Large x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}" />
+create an *ordered* vocabulary list of all *unique* words used in that string. The length of a one-hot encoded vector is the number of unique words in the vocabulary, 
+and the entries are  *0* everywhere except for a single *1* in the position of the word in the vocabulary
