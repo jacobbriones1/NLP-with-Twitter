@@ -52,12 +52,14 @@ removing unwanted characters and symbols, and lemmatization. <br>
 **wordPlots.py** : Contains visual tools to analyze word frequency. Needs to include more visual tools.<br>
 #### Methods:
   - `wordCloudPlot(dictionary)` : Plots a word cloud. Input parameter should be a word Frequency dictionary. frequency <br>
+  
 **word2vec** : Implementation of the Skip-Gram Word2Vec model which does not use pre-trained models. 
 
 ## The word2vec functions
 The word2vec model allows us to learn *word embeddings* on large pieces of text data. The benefit of using learned word embeddings
 is that they allow us to train models without the use of pre-labelled data.In other words, unsupervised learning. These embeddings are
-learned using a common machine learning technique: we train a fully connected network with a single hidden layer. <br>
+learned using a common machine learning technique: we train a fully connected network with a single hidden layer. I explain what this means
+and how this is done below. <br>
 
 **What exaclty is a Word Embedding?**<br>
 A word embedding is a parametrized function which maps words in some language to higher dimensional higher dimensional vector representations.
@@ -72,4 +74,4 @@ As an example, we can consider the following tweet:<br>
 In order for a computer to process this statement, we need to convert it into a form which it can process. The simplest way to do represent this statement
 is to convert each word into a vector known as a **One-Hot Encoded** vector. To convert a word into a One-Hot Encoded vector, the first step is to
 create an *ordered* vocabulary list of all *unique* words used in that string. The length of a one-hot encoded vector is the number of unique words in the vocabulary, 
-and the entries are 0 everywhere except for a single 1 in the position of the word in the vocabulary.
+and the entries are 0 everywhere except for a single 1 in the position of the word in the vocabulary. 
