@@ -53,6 +53,10 @@ removing unwanted characters and symbols, and lemmatization. <br>
   **word2vec** : Implementation of the Skip-Gram Word2Vec model which does not use pre-trained models. 
 
 ## The word2vec functions
+<kbd>
+  <img src=wordEmbedding.jpeg>
+</kbd>
+
 The word2vec model allows us to learn *word embeddings* on large pieces of text data. The benefit of using learned word embeddings
 is that they allow us to train models without the use of pre-labelled data.In other words, unsupervised learning. These embeddings are
 learned using a common machine learning technique: we train a fully connected network with a single hidden layer.
