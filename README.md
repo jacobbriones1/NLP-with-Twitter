@@ -9,9 +9,8 @@ or events. In hopes of understanding public opinion about some product or event,
 *key-words* or *filters* that are relevent to our object of study. And after sifting through this information and extracting
 relevant text information, it is possible to determine a relatively accurate model of how  users' view our object of interest.
 This kind of analysis is commonly known as **Sentiment Analysis**. Sentiment analysis is one of the most important aspects of 
-Natural Language Processing, and a very active area of research. This repository is aimed at studying twitter data using
-various types of machine learning techniques, and will also serve as a guide for understanding concepts in Deep Learning and 
-Natural Language Processing. <br>
+Natural Language Processing, and a very active area of research. This repository is aimed at understanding the sentiment 
+of some of the topics which are trending on Twitter<br>
 *This Repository is still being developed. For any students or individuals interested in collaborating
 or contributing, feel free to contact me at jacobbriones1@gmail.com*<br>
 <kbd>
