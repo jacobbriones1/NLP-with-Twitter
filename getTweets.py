@@ -50,5 +50,5 @@ def getTweets(ketwords_to_track):
                 save_file.write(str(tweet))
                 
         # Initiate the stream
-        stream = Stream(auth, CustomStreamListener(api))
+        stream = Stream(auth, CustomStreamListener(api), tweet_mode='extended')
         stream.filter(track=keywords_to_track)
