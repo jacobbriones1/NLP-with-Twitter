@@ -1,5 +1,11 @@
 # NLP with Twitter Data
 
+## Getting Tweets:
+To get tweets, open up the `getTweets.py` file, and type in the keywords you want to track, as well as the filename you wish to
+store the .json object in. Then run the code. You will be able to see the tweets which are being stored in your file in real time.
+## Convert tweets from .json file to .csv file
+
+
 ## About this repository
 There are over 330 million twitter users, with over 145 million active users daily. There are on average 6,000
 new tweets every second from users all over the world. With twitter being a public platform, this information 
