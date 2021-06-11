@@ -15,7 +15,7 @@ of some of the topics which are trending on Twitter<br>
 <kbd>
   <img src=trumpWordcloud.png>
 </kbd>
-
+---
 ## Getting Tweets:
 To get tweets, download the `get_tweets.py` file, and define a CustomStreamListener object, and use the `collect` method as follows:
 ```
@@ -36,8 +36,8 @@ This should begin streaming tweets, which you will be able to view in the comman
 ![Collecting Tweets](https://user-images.githubusercontent.com/70331998/121632815-8ac2d080-ca36-11eb-849b-f786332c8245.png)
 
 These tweets will be stored into a json file with the format: 'YYYY-MM-DD-tweets.json'
-
-### Repository Files:
+---
+## Repository Files:
 - **get_tweets.py** : Is the file which contains objects which allow users to access live streaming tweets. The main library used in this program is the `tweepy` library,
 which is solely used to connect to the Twitter API through python. The user must identify their credentials
 in order to connect to the Twitter API. For information on how to access the Twitter API using python see http://docs.tweepy.org/en/latest/ and https://developer.twitter.com/en/docs/getting-started.<br>
