@@ -1,8 +1,12 @@
 # NLP with Twitter Data
 
 ## Getting Tweets:
-To get tweets, open up the `getTweets.py` file, and type in the keywords you want to track, as well as the filename you wish to
-store the .json object in. Then run the code. You will be able to see the tweets which are being stored in your file in real time.
+To get tweets, download the `get_tweets.py` file, and define a CustomStreamListener object, and use the `collect` method as follows:
+```
+csl = CustomStreamListener(file_path='C:path\to\directory\containing\credentials\file)
+csl.collect(['joe biden','donald trump'])
+
+```
 ## Convert tweets from .json file to .csv file
 
 
@@ -17,8 +21,7 @@ relevant text information, it is possible to determine a relatively accurate mod
 This kind of analysis is commonly known as **Sentiment Analysis**. Sentiment analysis is one of the most important aspects of 
 Natural Language Processing, and a very active area of research. This repository is aimed at understanding the sentiment 
 of some of the topics which are trending on Twitter<br>
-*This Repository is still being developed. For any students or individuals interested in collaborating
-or contributing, feel free to contact me at jacobbriones1@gmail.com*<br>
+
 <kbd>
   <img src=trumpWordcloud.png>
 </kbd>
