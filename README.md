@@ -19,9 +19,18 @@ of some of the topics which are trending on Twitter<br>
 ## Getting Tweets:
 To get tweets, download the `get_tweets.py` file, and define a CustomStreamListener object, and use the `collect` method as follows:
 ```
-csl = CustomStreamListener(file_path='C:path\\to\\directory\\containing\\credentials\\file)
+dir = 'C:path\\to\\directory\\containing\\credentials\\file'
+csl = CustomStreamListener(file_path=dir)
 csl.collect(['joe biden','donald trump'])
 ```
+The dir should contain a file called `credentials.py` which should define the following:
+```
+CONSUMER_KEY = "cyDpsp0O**************"
+CONSUMER_SECRET = "rMoOg**************"
+ACCESS_TOKEN = "13040287**************"
+ACCESS_SECRET = "hByQaKO**************"
+```
+For instructions on how to get authentication credentials, check out [Twitter's tutorials](https://developer.twitter.com/en/docs/getting-started).
 This should begin streaming tweets, which you will be able to view in the command prompt
 ![Collecting Tweets](https://user-images.githubusercontent.com/70331998/121632815-8ac2d080-ca36-11eb-849b-f786332c8245.png)
 
