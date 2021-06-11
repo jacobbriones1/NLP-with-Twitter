@@ -34,13 +34,11 @@ For instructions on how to get authentication credentials, check out [Twitter's 
 This should begin streaming tweets, which you will be able to view in the command prompt
 ![Collecting Tweets](https://user-images.githubusercontent.com/70331998/121632815-8ac2d080-ca36-11eb-849b-f786332c8245.png)
 
-### Program Files and Methods:
-**getTweets.py** : Is the retrieval program which allows users to access live streaming tweets. The main used in this program is the `tweepy` library,
+### Repository Files:
+**get_tweets.py** : Is the file which contains objects which allow users to access live streaming tweets. The main library used in this program is the `tweepy` library,
 which is solely used to connect to the Twitter API through python. The user must identify their credentials
 in order to connect to the Twitter API. For information on how to access the Twitter API using python see http://docs.tweepy.org/en/latest/ and https://developer.twitter.com/en/docs/getting-started.<br>
-#### Methods:
-  -  `getTweets([keywords_to_track]) ` : This method must be called to initialize the stream. The input can be any list of
-  keywords which the user intends to track. <br>
+
 
 **credentials.py** : Stores Access and Client information needed to for API authrorization <br>
 
