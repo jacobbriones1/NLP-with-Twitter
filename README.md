@@ -31,8 +31,11 @@ ACCESS_TOKEN = "13040287**************"
 ACCESS_SECRET = "hByQaKO**************"
 ```
 For instructions on how to get authentication credentials, check out [Twitter's tutorials](https://developer.twitter.com/en/docs/getting-started).
-This should begin streaming tweets, which you will be able to view in the command prompt
+This should begin streaming tweets, which you will be able to view in the command prompt:
+
 ![Collecting Tweets](https://user-images.githubusercontent.com/70331998/121632815-8ac2d080-ca36-11eb-849b-f786332c8245.png)
+
+These tweets will be stored into a json file with the format: 'YYYY-MM-DD-tweets.json'
 
 ### Repository Files:
 **get_tweets.py** : Is the file which contains objects which allow users to access live streaming tweets. The main library used in this program is the `tweepy` library,
