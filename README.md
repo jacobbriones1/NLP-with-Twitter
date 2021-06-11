@@ -38,7 +38,7 @@ This should begin streaming tweets, which you will be able to view in the comman
 These tweets will be stored into a json file with the format: 'YYYY-MM-DD-tweets.json'
 
 ### Repository Files:
-**get_tweets.py** : Is the file which contains objects which allow users to access live streaming tweets. The main library used in this program is the `tweepy` library,
+- **get_tweets.py** : Is the file which contains objects which allow users to access live streaming tweets. The main library used in this program is the `tweepy` library,
 which is solely used to connect to the Twitter API through python. The user must identify their credentials
 in order to connect to the Twitter API. For information on how to access the Twitter API using python see http://docs.tweepy.org/en/latest/ and https://developer.twitter.com/en/docs/getting-started.<br>
 
