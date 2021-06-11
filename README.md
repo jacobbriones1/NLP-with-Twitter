@@ -1,16 +1,5 @@
 # NLP with Twitter Data
 
-## Getting Tweets:
-To get tweets, download the `get_tweets.py` file, and define a CustomStreamListener object, and use the `collect` method as follows:
-```
-csl = CustomStreamListener(file_path='C:path\\to\\directory\\containing\\credentials\\file)
-csl.collect(['joe biden','donald trump'])
-```
-![Collecting Tweets](https://user-images.githubusercontent.com/70331998/121632815-8ac2d080-ca36-11eb-849b-f786332c8245.png)
-
-## Convert tweets from .json file to .csv file
-
-
 ## About this repository
 There are over 330 million twitter users, with over 145 million active users daily. There are on average 6,000
 new tweets every second from users all over the world. With twitter being a public platform, this information 
@@ -26,6 +15,16 @@ of some of the topics which are trending on Twitter<br>
 <kbd>
   <img src=trumpWordcloud.png>
 </kbd>
+
+## Getting Tweets:
+To get tweets, download the `get_tweets.py` file, and define a CustomStreamListener object, and use the `collect` method as follows:
+```
+csl = CustomStreamListener(file_path='C:path\\to\\directory\\containing\\credentials\\file)
+csl.collect(['joe biden','donald trump'])
+```
+This should begin streaming tweets, which you will be able to view in the command prompt
+![Collecting Tweets](https://user-images.githubusercontent.com/70331998/121632815-8ac2d080-ca36-11eb-849b-f786332c8245.png)
+
 ### Program Files and Methods:
 **getTweets.py** : Is the retrieval program which allows users to access live streaming tweets. The main used in this program is the `tweepy` library,
 which is solely used to connect to the Twitter API through python. The user must identify their credentials
