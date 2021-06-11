@@ -8,7 +8,7 @@ from tweepy import Stream
 
 def get_credentials(file_path=None):
     """Retrieve credentials from credentials.py file in dir
-        specified by file_path. """
+        specified by filepath"""
     if file_path:
         sys.path.insert(1, file_path)
     import credentials
@@ -17,17 +17,18 @@ def get_credentials(file_path=None):
     consumer_secret = credentials.CONSUMER_SECRET
     access_token = credentials.ACCESS_TOKEN
     access_secret = credentials.ACCESS_SECRET
-    
     auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
     auth.set_access_token(access_token, access_secret)
     return auth
 
 class CustomStreamListener(tweepy.StreamListener):
-    """Class for downloading tweets in real time"""
+    """Class for downloading tweets in real time using the Twitter API."""
     
-    def __init__(self, api=None, file_name=None, file_path=None):
-        """Initialize a custom stream listener"""
-
+    def __init__(self, api=None, file_path=None):
+        """Initialize a custom stream listener. The default file_path is set to the current directory.
+            If an api is not specified upon initialization, then the file_path directory must contain a 
+            credentials.py file which define CONSUMER_KEY, CONSUMER_SECRET, ACCESS_TOKEN, and ACCESS_SECRET"""
+        
         self.auth = get_credentials(file_path)
         
         if not api:
@@ -39,27 +40,14 @@ class CustomStreamListener(tweepy.StreamListener):
         super(tweepy.StreamListener, self).__init__()
         self.save_file = []
 
-        # Case for when file_name is given in .json format     
-        if file_name and '.json' in file_name:
-            self.file_name = file_name
-            save_file = open(file_name, 'a')
-
-        # Case for when file_name is given without .json format
-        elif file_name and not '.json' in file_name:
-            save_file = open(file_name+'.json', 'a')
-            self.file_name = file_name+'.json'
-
-        # If no file_name is given, default file_name is tweets.json
-        else:
-            save_file = open('tweets.json', 'a')
-            self.file_name = 'tweets.json'
+        self.file_name = datetime.datetime.today().strftime('%Y-%m-%d')+'-tweets.json'
 
     
     def on_data(self, tweet):
         """The on_data method of a stream listener receives all
             messages and calls functions according to the message type"""
-        
         save_file = open(self.file_name, 'a')
+
         self.save_file.append(json.loads(tweet))
         text = json.loads(tweet)
         
