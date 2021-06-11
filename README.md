@@ -3,10 +3,11 @@
 ## Getting Tweets:
 To get tweets, download the `get_tweets.py` file, and define a CustomStreamListener object, and use the `collect` method as follows:
 ```
-csl = CustomStreamListener(file_path='C:path\to\directory\containing\credentials\file)
+csl = CustomStreamListener(file_path='C:path\\to\\directory\\containing\\credentials\\file)
 csl.collect(['joe biden','donald trump'])
-
 ```
+![Collecting Tweets](https://user-images.githubusercontent.com/70331998/121632815-8ac2d080-ca36-11eb-849b-f786332c8245.png)
+
 ## Convert tweets from .json file to .csv file
 
 
